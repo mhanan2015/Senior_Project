@@ -1,0 +1,14 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\src",
+    "\\src\\app",
+    "\\src\\models",
+    "\\src\\pages",
+    "\\src\\pages\\post",
+    "\\src\\pages\\signup",
+    "\\src\\providers"
+  ],
+  "SelectedNode": "\\src\\pages\\post\\post.ts",
+  "PreviewInSolutionExplorer": false
+}

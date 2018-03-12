@@ -1,0 +1,73 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Post Event
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-item>
+    <ion-label floating>Course Name</ion-label>
+    <ion-select [(ngModel)]="profile.courseName">
+      <ion-option value="Comp165">Comp165</ion-option>
+      <ion-option value="Comp167">Comp167</ion-option>
+      <ion-option value="Comp180">Comp180</ion-option>
+      <ion-option value="Comp322">Comp322</ion-option>
+      <ion-option value="Comp410">Comp410</ion-option>
+    </ion-select>
+  </ion-item>
+
+  <ion-item>
+    <ion-label floating>Professor name</ion-label>
+    <ion-input [(ngModel)]="profile.profName"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label floating>Your Classification</ion-label>
+    <ion-select [(ngModel)]="profile.classificationName">
+      <ion-option value="Freshman">Freshman</ion-option>
+      <ion-option value="Sophomore">Sophomore</ion-option>
+      <ion-option value="Junior">Junior</ion-option>
+      <ion-option value="Senior">Senior</ion-option>
+    </ion-select>
+  </ion-item>
+
+  <ion-item>
+    <ion-label floating>Course Difficulty</ion-label>
+    <ion-select [(ngModel)]="profile.courseDiff">
+      <ion-option value="1">*</ion-option>
+      <ion-option value="2">**</ion-option>
+      <ion-option value="3">***</ion-option>
+      <ion-option value="4">****</ion-option>
+      <ion-option value="5">*****</ion-option>
+    </ion-select>
+  </ion-item>
+
+  <ion-item>
+    <ion-label floating>Rate Professor</ion-label>
+    <ion-select [(ngModel)]="profile.profRate">
+      <ion-option value="1">*</ion-option>
+      <ion-option value="2">**</ion-option>
+      <ion-option value="3">***</ion-option>
+      <ion-option value="4">****</ion-option>
+      <ion-option value="5">*****</ion-option>
+    </ion-select>
+  </ion-item>
+
+  <ion-item>
+    <ion-label floating>Topics covered in the course:</ion-label>
+    <ion-input [(ngModel)]="profile.courseTopics"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label floating>Any other comments or suggestions:</ion-label>
+    <ion-input [(ngModel)]="profile.feedback"></ion-input>
+  </ion-item>
+
+  <ion-list>
+    <button (click)="addItem()" ion-button>Post</button>
+
+  </ion-list>
+
+</ion-content>
