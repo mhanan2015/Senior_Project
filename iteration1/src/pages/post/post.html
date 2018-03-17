@@ -8,7 +8,7 @@
 
 <ion-content padding>
   <ion-item>
-    <ion-label floating>Course Name</ion-label>
+    <ion-label floating>*Course Name</ion-label>
     <ion-select [(ngModel)]="profile.courseName">
       <ion-option value="Comp165">Comp165</ion-option>
       <ion-option value="Comp167">Comp167</ion-option>
@@ -34,7 +34,7 @@
   </ion-item>
 
   <ion-item>
-    <ion-label floating>Course Difficulty</ion-label>
+    <ion-label floating>*Course Difficulty</ion-label>
     <ion-select [(ngModel)]="profile.courseDiff">
       <ion-option value="1">*</ion-option>
       <ion-option value="2">**</ion-option>
@@ -45,7 +45,7 @@
   </ion-item>
 
   <ion-item>
-    <ion-label floating>Rate Professor</ion-label>
+    <ion-label floating>*Rate Professor</ion-label>
     <ion-select [(ngModel)]="profile.profRate">
       <ion-option value="1">*</ion-option>
       <ion-option value="2">**</ion-option>
@@ -66,7 +66,7 @@
   </ion-item>
 
   <ion-list>
-    <button (click)="addItem()" ion-button>Post</button>
+    <button (click)="required()" ion-button>Post</button>
 
   </ion-list>
 

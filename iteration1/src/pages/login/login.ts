@@ -1,4 +1,4 @@
-﻿import { Component } from '@angular/core';
+import { Component } from '@angular/core';
 import { 
   IonicPage, 
   NavController, 
@@ -10,7 +10,7 @@ import { AuthProvider } from '../../providers/auth/auth';
 import { MainMenuPage } from '../main-menu/main-menu';
 import { EmailValidator } from '../../validators/email';
 import { SignupPage } from '../signup/signup';
-
+import { ReviewPage } from '../review/review';
 
 /**
  * Generated class for the LoginPage page.
@@ -46,7 +46,11 @@ export class LoginPage {
     } else {
       this.authData.loginUser(this.loginForm.value.email, this.loginForm.value.password)
       .then( authData => {
-        this.navCtrl.setRoot(MainMenuPage);
+        if (this.loginForm.value.email.slice(-9) == "@ncat.edu") {
+          this.navCtrl.setRoot(ReviewPage)
+        } else {
+          this.navCtrl.setRoot(MainMenuPage);
+        } 
       }, error => {
         this.loading.dismiss().then( () => {
           let alert = this.alertCtrl.create({

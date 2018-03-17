@@ -26,8 +26,24 @@ export class PostPage {
     });*/
 
   }
+
   addItem() {
     this.fdb.list("/feedback/").push(this.profile);
     this.navCtrl.setRoot(MainMenuPage);
+    alert("Thank you for your feedback!!!");
   }
+
+  required() {
+    var empt = this.profile.courseName;
+    if (this.profile.courseName == null || this.profile.courseDiff == null || this.profile.profRate == null) {
+      alert("Please fill out required(*) fields");
+    return false;
+  }
+  else {
+    this.addItem();
+    return true;
+  }
+}
+
+  
 }
